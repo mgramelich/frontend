@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
 
@@ -32,10 +33,10 @@ export default defineNuxtConfig({
 
   modules: [
     ['@nuxt/icon'],
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-3474796013546911',
-      test: true
-    }]
+    // ['@nuxtjs/google-adsense', {
+    //   id: 'ca-pub-3474796013546911',
+    //   test: true
+    // }]
   ],
 
   // googleAdsense: {

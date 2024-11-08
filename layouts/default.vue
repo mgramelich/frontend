@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="bg-white h-[50px] w-full">
-      <Adsbygoogle :ad-slot="'9740096598'" :ad-format="'auto'"  />
+    <div class="p-1 bg-blue-300 w-full h-[40px]">
+      Espaço de teste para AdSense <br />
     </div>
 
 
@@ -45,7 +45,3 @@
     </nav>
   </div>
 </template>
-
-<scritp setup>
-
-</scritp>
