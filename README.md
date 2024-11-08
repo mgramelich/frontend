@@ -1,1 +1,1 @@
-# npm run dev
+# Para rodar: npm run dev
