@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div class="p-1 bg-blue-300 w-full h-[40px]">
-      Espaço de teste para AdSense <br />
-    </div>
-
-
     <slot />
 
     <!-- Bottom Navigation Bar -->
