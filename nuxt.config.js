@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   postcss: {
     plugins: {
@@ -10,14 +10,14 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-11-05',
+  compatibilityDate: "2024-11-05",
 
   router: {
-    base: '/',
-    routeNameSplitter: '-',
-    linkActiveClass: 'active',
-    linkExactActiveClass: 'exact-active',
-    middleware: ['auth'],
+    base: "/",
+    routeNameSplitter: "-",
+    linkActiveClass: "active",
+    linkExactActiveClass: "exact-active",
+    middleware: ["auth"],
     scrollBehavior: true,
     trailingSlash: true,
   },
@@ -25,12 +25,11 @@ export default defineNuxtConfig({
   router: {
     routes: [
       {
-        path: '/',
-        component: './pages/index.vue', // Set the default start page to index.vue
+        path: "/",
+        component: "./pages/index.vue", // Set the default start page to index.vue
       },
     ],
   },
 
-  modules: [
-    ['@nuxt/icon'], '@nuxt/ui'],
-})
+  modules: [["@nuxt/icon"], "@nuxt/ui"],
+});
