@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  app: {
+    baseURL: './',
+    buildAssetsDir: '/_nuxt/',
+  },
+
   ssr: false,
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],

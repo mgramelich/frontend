@@ -1,4 +1,6 @@
-module.exports = {
+const konstaConfig = require("konsta/config");
+
+module.exports = konstaConfig({
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -11,4 +13,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+});
