@@ -9,8 +9,16 @@ module.exports = konstaConfig({
     "./app.vue",
     "./error.vue",
   ],
+  konsta: {
+    colors: {
+      primary: '#fca311',
+      'brand-red': '#ff0000',
+      'brand-green': '#00ff00',
+    }
+  },
   theme: {
     extend: {},
   },
   plugins: [],
+
 });

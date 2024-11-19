@@ -5,45 +5,40 @@
     <slot />
 
     <!-- Right Bottom -->
-    <k-fab class="fixed right-4-safe bottom-16-safe z-20" @click="() => (actionsOneOpened = true)">
-      +
+    <k-fab class="fixed right-4-safe bottom-1-safe z-20 k-color-light-primary hover:k-color-brand-green" @click="() => (actionsOneOpened = true)">
+      <nuxt-icon name="creation" class="text-3xl pt-1 text-white" />
     </k-fab>
 
-    <k-tabbar :labels="isTabbarLabels" :icons="isTabbarIcons" class="left-0 bottom-0 fixed">
-      <k-tabbar-link @click="$router.push('/')"
-        class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
+    <k-tabbar :labels="isTabbarLabels" :icons="isTabbarIcons" class="left-0 bottom-0 fixed" hidden>
+      <k-tabbar-link @click="$router.push('/')" class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
         <div class="flex flex-col items-center">
           <Icon name="ph:bank" class="text-xl text-white" />
           <span class="mt-0 text-sm text-white">Home</span>
         </div>
       </k-tabbar-link>
 
-      <k-tabbar-link @click="$router.push('/saints')"
-        class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
+      <k-tabbar-link @click="$router.push('/saints')" class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
         <div class="flex flex-col items-center">
           <Icon name="ph:person-fill" class="text-xl text-white" />
           <span class="mt-0 text-sm text-white">Cavaleiros</span>
         </div>
       </k-tabbar-link>
 
-      <k-tabbar-link @click="$router.push('/cloths')"
-        class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
+      <k-tabbar-link @click="$router.push('/cloths')" class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
         <div class="flex flex-col items-center">
           <Icon name="ph:shield-checkered-fill" class="text-xl text-white" />
           <span class="mt-0 text-sm text-white">Armaduras</span>
         </div>
       </k-tabbar-link>
 
-      <k-tabbar-link @click="$router.push('/')"
-        class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
+      <k-tabbar-link @click="$router.push('/')" class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
         <div class="flex flex-col items-center">
           <Icon name="ph:shooting-star-bold" class="text-xl text-white" />
           <span class="mt-0 text-sm text-white">Constelações</span>
         </div>
       </k-tabbar-link>
 
-      <k-tabbar-link @click="$router.push('/')"
-        class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
+      <k-tabbar-link @click="$router.push('/')" class="flex flex-col items-center justify-center text-center w-full bg-slate-900">
         <div class="flex flex-col items-center">
           <Icon name="ph:magnifying-glass" class="text-xl text-white" />
           <span class="mt-0 text-sm text-white">Pesquisar</span>
@@ -60,21 +55,35 @@
 
     <k-actions :opened="actionsOneOpened" @backdropclick="() => (actionsOneOpened = false)">
       <k-actions-group>
-        <k-actions-button @click="handleClick('/')" class="text-blue-600">Home</k-actions-button>
-
-        <k-actions-button @click="handleClick('/saints')" class="text-blue-600">Cavaleiros</k-actions-button>
-
-        <k-actions-button @click="handleClick('/cloths')" class="text-blue-600">Armaduras</k-actions-button>
-
-        <k-actions-button @click="handleClick('/')" class="text-blue-600">Constelações</k-actions-button>
-
-        <k-actions-button @click="handleClick('/')" class="text-blue-600">Pesquisar</k-actions-button>
-
         <k-actions-button @click="handleClick('/')" class="text-blue-600">
-          <Icon name="ph:share-network" class="text-xl text-white" /> Compartilhar
+          <Icon name="ph:bank" class="text-xl text-white mr-2" /> Home
         </k-actions-button>
 
-        <k-actions-button @click="handleClick" class="text-red-600">Cancelar</k-actions-button>
+        <k-actions-button @click="handleClick('/saints')" class="text-blue-600">
+          <Icon name="ph:person-fill" class="text-xl text-white mr-2" /> Personagens
+        </k-actions-button>
+
+        <k-actions-button @click="handleClick('/cloths')" class="text-blue-600">
+          <Icon name="ph:shield-checkered-fill" class="text-xl text-white mr-2" /> Armaduras
+        </k-actions-button>
+
+        <k-actions-button @click="handleClick('/')" class="text-blue-600">
+          <Icon name="ph:shooting-star-bold" class="text-xl text-white mr-2" /> Constelações
+        </k-actions-button>
+
+        <k-actions-button @click="handleClick('/')" class="text-blue-600">
+          <Icon name="ph:magnifying-glass" class="text-xl text-white mr-2" /> Pesquisar
+        </k-actions-button>
+
+        <k-actions-button @click="handleClick('/')" class="text-blue-600">
+          <Icon name="ph:share-network" class="text-xl text-white mr-2" /> Compartilhar
+        </k-actions-button>
+
+        <hr class="border-slate-600" />
+
+        <k-actions-button @click="handleClick" class="">
+          <Icon name="ph:x-circle-bold" class="text-xl text-white mr-2" /> Fechar
+        </k-actions-button>
 
       </k-actions-group>
     </k-actions>
@@ -159,5 +168,4 @@ const handleClick = (url) => {
 
   actionsOneOpened.value = false;
 };
-
 </script>
